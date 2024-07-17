@@ -15,7 +15,7 @@ outputs:
     description: The time we greeted you
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: docker
+  image: Dockerfile
   args:
     INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}
