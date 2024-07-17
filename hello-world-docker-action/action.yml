@@ -7,7 +7,7 @@ inputs:
   who-to-greet:
     description: Who to greet
     required: true
-    default: World
+    default: world
 
 # Define your outputs here.
 outputs:
@@ -15,7 +15,7 @@ outputs:
     description: The time we greeted you
 
 runs:
-  using: docker
-  image: Dockerfile
-  env:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
     INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}
